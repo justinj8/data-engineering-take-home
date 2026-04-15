@@ -63,6 +63,8 @@ Technology normalization mapping used:
 
 ## Data Quality Problems & Resolutions
 
+| # | Problem | Table | Details | Resolution |
+|---|---------|-------|---------|------------|
 | 1 | **Duplicate usage events** | usage_events | sid=2 loaded from 3 source files with different `ld_dttm` values. Two have mb=50, one has mb=55. | Kept first occurrence per sid (earliest load time). |
 | 2 | **Negative MB** | usage_events | sid=26 has mb=-5.0 | Removed — usage cannot be negative. |
 | 3 | **Null event timestamp** | usage_events | sid=27 has null `evt_dttm` | Removed — can't attribute to a day or match to a plan. |

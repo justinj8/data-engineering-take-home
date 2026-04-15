@@ -230,8 +230,8 @@ costed_rows = usage_clean["cost"].notna().sum()
 uncosted_rows = usage_clean["cost"].isna().sum()
 
 print(f"\nQ4: Total cost of all data used: ${total_cost:.2f} USD")
-print(f"    ({costed_rows} events costed, {uncosted_rows} events could not be costed)")
-print(f"\n    Cost breakdown by event:")
+print(f"({costed_rows} events costed, {uncosted_rows} events could not be costed)")
+print(f"\n Cost breakdown by event:")
 cost_detail = usage_clean[["sid", "pid", "asset_id", "bundle_id", "mb", "tech_clean", "rate", "cost"]].copy()
 print(cost_detail.to_string())
 
@@ -258,5 +258,5 @@ plt.savefig("daily_usage_chart.png", dpi=150, bbox_inches="tight")
 print("\n✅ Chart saved to daily_usage_chart.png")
 
 print("\n" + "=" * 60)
-print("DONE — See ANSWERS.md for full write-up")
+print("DONE")
 print("=" * 60)

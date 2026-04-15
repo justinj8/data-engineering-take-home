@@ -154,6 +154,8 @@ CREATE INDEX idx_usage_source ON usage_event(source_file);
 
 ## Key Changes
 
+| Area | Before | After |
+|------|--------|-------|
 | **Primary keys** | None defined | Every table has an explicit PK |
 | **Foreign keys** | None defined | All relationships enforced |
 | **Column naming** | Cryptic abbreviations (`evt_dttm`, `x_dttm`, `why_cd`) | Descriptive names (`event_at`, `expired_at`, `reason`) |
